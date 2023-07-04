@@ -11,10 +11,8 @@ artifacts:
   TENSORBOARD_ROOT_LOG_DIR: tensorboard_log_dir
   CALLBACKS_DIR: callbacks
 
-source_download_dirs:
-  - path_to_data_1
-  - path_to_data_1
+data:
+  URL: https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip
+  local_dir: data
+  data_file: data.zip 
 
-local_data_dirs:
-  - path_to_local_data_1
-  - path_to_local_data_2
