@@ -28,6 +28,7 @@ share/python-wheels/
 MANIFEST
 .data/
 data/
+.running_logs.log/
 
 
 # PyInstaller
