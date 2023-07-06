@@ -1,0 +1,11 @@
+[2023-07-06 18:33:38,658: INFO: stage_01_getdata]: 
+********************
+[2023-07-06 18:33:38,658: INFO: stage_01_getdata]: >>>>> stage GET_DATA started <<<<<
+[2023-07-06 18:33:38,665: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-07-06 18:33:38,666: INFO: common]: created directory at: data
+[2023-07-06 18:33:38,668: INFO: stage_01_getdata]: filename:data.zip already present
+[2023-07-06 18:33:38,668: INFO: common]: created directory at: data
+[2023-07-06 18:33:38,668: INFO: common]: extraction started...
+[2023-07-06 18:34:13,661: INFO: common]: Extracted data\data.zip file to data
+[2023-07-06 18:34:13,671: INFO: stage_01_getdata]: >>>>> stage GET_DATA completed!<<<<<
+
