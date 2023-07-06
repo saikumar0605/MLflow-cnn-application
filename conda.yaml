@@ -1,4 +1,4 @@
-name: MLflow-CNN
+name: env
 channels:
   - defaults
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
   - certifi=2022.12.7=py37haa95532_0
   - openssl=1.1.1u=h2bbff1b_0
   - pip=22.3.1=py37haa95532_0
-  - python=3.7.16=h6244533_0
+  - python=3.7.11=h6244533_0
   - setuptools=65.6.3=py37haa95532_0
   - sqlite=3.41.2=h2bbff1b_0
   - vc=14.2=h21ff451_1
@@ -52,7 +52,7 @@ dependencies:
       - scipy==1.7.3
       - six==1.16.0
       - smmap==5.0.0
-      - sqlalchemy==1.4.48
+      - sqlalchemy==1.4.49
       - sqlparse==0.4.4
       - tabulate==0.9.0
       - tqdm==4.65.0
@@ -62,4 +62,4 @@ dependencies:
       - websocket-client==1.6.1
       - werkzeug==2.2.3
       - zipp==3.15.0
-# prefix: C:\Users\123sa\Desktop\MLflow\MLflow-cnn-application\env
+prefix: C:\Users\123sa\anaconda3\envs\env
