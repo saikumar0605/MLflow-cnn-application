@@ -1,9 +1,0 @@
-
-
-[2023-07-06 16:38:29,091: INFO: stage_00_template]: 
-********************
-[2023-07-06 16:38:29,091: INFO: stage_00_template]: >>>>> stage TEMPLATE started <<<<<
-[2023-07-06 16:38:29,093: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2023-07-06 16:38:29,093: INFO: common]: yaml file: params.yaml loaded successfully
-[2023-07-06 16:38:29,093: INFO: stage_00_template]: >>>>> stage TEMPLATE completed!<<<<<
-

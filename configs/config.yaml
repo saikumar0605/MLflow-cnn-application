@@ -12,7 +12,8 @@ artifacts:
   CALLBACKS_DIR: callbacks
 
 data:
-  URL: https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip
+  source_url: https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip
   local_dir: data
   data_file: data.zip 
+  #the url, local_dir and data_file are used to download the data from the url and save it in the local_dir with the name data_file{data.zip}
 
