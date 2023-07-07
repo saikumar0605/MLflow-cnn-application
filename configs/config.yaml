@@ -19,3 +19,14 @@ data:
   unzip_data_dir: data #here we are extracting the data.zip file and saving it in the data folder. later we can change path if required.
   bad_data_dir: bad_data
   parent_data_dir: PetImages
+  model_dir: model
+  init_modal_file: init_model.h5
+
+params:
+  img_shape: [180, 180, 3] #if we use () it will treat as string. so use [] for list. later we can call in layer creation.
+  lr : 0.001
+  loss: sparse_categorical_crossentropy
+  metrics: ["accuracy"]
+
+  #we will save model in data folder only for now. 
+
