@@ -26,6 +26,8 @@ def save_json(path: str, data: dict) -> None:
 
 # -> is none or dict because it stores nothing or some data.
 def unzip_file(source: str, dest: str) -> None:
+
+
     logging.info(f"extraction started...")
     with ZipFile(source, "r") as zip_f:
         zip_f.extractall(dest)

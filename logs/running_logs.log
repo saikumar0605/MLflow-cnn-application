@@ -1,14 +1,81 @@
-[2023-07-07 18:46:23,366: INFO: main]: 
+[2023-07-08 18:48:35,485: INFO: main]: 
 ********************
-[2023-07-07 18:46:23,366: INFO: main]: >>>>> stage Main started <<<<<
-[2023-07-07 18:46:23,843: ERROR: main]: Run (ID 'a5261814be584ac898c6b6268a9568e4') failed
+[2023-07-08 18:48:35,485: INFO: main]: >>>>> stage Main started <<<<<
+[2023-07-08 18:48:36,762: INFO: stage_01_getdata]: 
+********************
+[2023-07-08 18:48:36,762: INFO: stage_01_getdata]: >>>>> stage GET_DATA started <<<<<
+[2023-07-08 18:48:36,765: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-07-08 18:48:36,767: INFO: common]: created directory at: data
+[2023-07-08 18:48:36,767: INFO: stage_01_getdata]: filename:data.zip already present
+[2023-07-08 18:48:36,767: INFO: stage_01_getdata]: data already extracted
+[2023-07-08 18:48:36,767: INFO: common]: created directory at: data\bad_data
+[2023-07-08 18:49:15,854: INFO: stage_01_getdata]: >>>>> stage GET_DATA completed!<<<<<
+
+[2023-07-08 18:49:15,996: ERROR: main]: Could not find base_model_creation among entry points ['main', 'get_data', 'base_model'] or interpret base_model_creation as a runnable script. Supported script file extensions: ['.py', '.sh']
 Traceback (most recent call last):
-  File "src/main.py", line 32, in <module>
+  File "src/main.py", line 36, in <module>
     main()
-  File "src/main.py", line 23, in main
-    mlflow.run(".", "get_data", use_conda=False)
-  File "C:\Users\123sa\anaconda3\envs\env\lib\site-packages\mlflow\projects\__init__.py", line 360, in run
-    _wait_for(submitted_run_obj)
-  File "C:\Users\123sa\anaconda3\envs\env\lib\site-packages\mlflow\projects\__init__.py", line 377, in _wait_for
-    raise ExecutionException("Run (ID '%s') failed" % run_id)
-mlflow.exceptions.ExecutionException: Run (ID 'a5261814be584ac898c6b6268a9568e4') failed
+  File "src/main.py", line0, in main
+    mlflow.run(".", "base_model_creation", use_conda=False)
+  File "C:\Users\123sa\anaconda3\envs\env\lib\site-packages\mlflow\projects\__init__.py", line 357, in run
+    skip_image_build=skip_image_build,
+  File "C:\Users\123sa\anaconda3\envs\env\lib\site-packages\mlflow\projects\__init__.py", line 110, in _run
+    experiment_id,
+  File "C:\Users\123sa\anaconda3\envs\env\lib\site-packages\mlflow\projects\backend\local.py", line 77, in run
+    work_dir = fetch_and_validate_project(project_uri, version, entry_point, params)
+  File "C:\Users\123sa\anaconda3\envs\env\lib\site-packages\mlflow\projects\utils.py", line 139, in fetch_and_validate_project
+    project.get_entry_point(entry_point)._validate_parameters(parameters)
+  File "C:\Users\123sa\anaconda3\envs\env\lib\site-packages\mlflow\projects\_project_spec.py", line 166, in get_entry_point
+    "{2}".format(entry_point, list(self._entry_points.keys()), list(ext_to_cmd.keys()))
+mlflow.exceptions.ExecutionException: Could not find base_model_creation among entry points ['main', 'get_data', 'base_model'] or interpret base_model_creation as a runnable script. Supported script file extensions: ['.py', '.sh']
+[2023-07-08 18:50:49,729: INFO: main]: 
+********************
+[2023-07-08 18:50:49,729: INFO: main]: >>>>> stage Main started <<<<<
+[2023-07-08 18:50:51,823: INFO: stage_01_getdata]: 
+********************
+[2023-07-08 18:50:51,823: INFO: stage_01_getdata]: >>>>> stage GET_DATA started <<<<<
+[2023-07-08 18:50:51,827: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-07-08 18:50:51,827: INFO: common]: created directory at: data
+[2023-07-08 18:50:51,827: INFO: stage_01_getdata]: filename:data.zip already present
+[2023-07-08 18:50:51,827: INFO: stage_01_getdata]: data already extracted
+[2023-07-08 18:50:51,827: INFO: common]: created directory at: data\bad_data
+[2023-07-08 18:51:26,776: INFO: stage_01_getdata]: >>>>> stage GET_DATA completed!<<<<<
+
+[2023-07-08 18:51:34,728: INFO: stage_02_base_model]: 
+********************
+[2023-07-08 18:51:34,728: INFO: stage_02_base_model]: >>>>> stage BASE MODEL CREATION started <<<<<
+[2023-07-08 18:51:34,732: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-07-08 18:51:34,732: INFO: stage_02_base_model]: layers defined
+[2023-07-08 18:51:35,073: INFO: stage_02_base_model]: base model summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 178, 178, 32)      896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 89, 89, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 87, 87, 32)        9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 43, 43, 32)       0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 59168)             0         
+                                                                 
+ dense (Dense)               (None, 8)                 473352    
+                                                                 
+ dense_1 (Dense)             (None, 2)                 18        
+                                                                 
+=================================================================
+Total params: 483,514
+Trainable params: 483,514
+Non-trainable params: 0
+_________________________________________________________________
+
+[2023-07-08 18:51:35,082: INFO: common]: created directory at: data\model
+[2023-07-08 18:51:35,153: INFO: stage_02_base_model]: base model saved at data\model\init_model.h5
+[2023-07-08 18:51:35,154: INFO: stage_02_base_model]: >>>>> stage BASE MODEL CREATION completed!<<<<<
+
+[2023-07-08 18:51:36,035: INFO: main]: >>>>> stage Main completed!<<<<<
+

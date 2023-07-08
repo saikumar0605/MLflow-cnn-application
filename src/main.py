@@ -16,12 +16,16 @@ logging.basicConfig(
     filemode="a"
     )
 
+#1:40:00 mlflow 2 video...
 
 #now in mail.py we we use mlflow to run it and work.
 def main():
     with mlflow.start_run() as run:
+        
         mlflow.run(".", "get_data", use_conda=False)
-        mlflow.run(".", "base_model_creation", use_conda=False)
+        mlflow.run(".", "base_model", use_conda=False)
+        # mlflow.run(".", "training", use_conda=False)
+
 
 
 if __name__ == '__main__':

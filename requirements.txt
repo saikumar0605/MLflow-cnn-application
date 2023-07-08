@@ -7,4 +7,4 @@ PyYAML
 pillow==9.0.1
 tensorflow
 ### local packages -
- -e . # << uncomment this to install from setup.py
+-e . # << uncomment this to install from setup.py
